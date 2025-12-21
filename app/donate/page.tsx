@@ -1,12 +1,17 @@
 import React from "react";
-
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 const page = () => {
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-100">
-      <h1 className="text-3xl font-bold text-gray-800">
-        🚧 Under Construction
-      </h1>
-    </div>
+    <main>
+      <Header />
+      <section>
+        <div className="h-screen mt-32">
+          <h1 className="">Page under construction</h1>
+        </div>
+      </section>
+      <Footer />
+    </main>
   );
 };
 
