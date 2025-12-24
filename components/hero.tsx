@@ -34,7 +34,7 @@ export default function Hero() {
                 TRIIBE Futures
               </a>
               <a
-                href="/about"
+                href="/about-us"
                 className="px-6 py-3 text-sm font-medium text-black bg-white border rounded-[12px] border-black hover:bg-green-950 hover:text-white transition-colors"
               >
                 About

@@ -1,18 +1,16 @@
-import React from "react";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
-const page = () => {
-  return (
-    <main>
-      <Header />
-      <section>
-        <div className="h-screen mt-32">
-          <h1 className="">Page under construction</h1>
-        </div>
-      </section>
-      <Footer />
-    </main>
-  );
+"use client";
+
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+
+const DonatePage = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push("/futures#donate");
+  }, [router]);
+
+  return null;
 };
 
-export default page;
+export default DonatePage;

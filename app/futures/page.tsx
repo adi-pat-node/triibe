@@ -160,7 +160,7 @@ const FuturesPage = () => {
       </section>
 
       {/* Full Overview Banner */}
-      <section className="py-12 px-6 bg-gray-50">
+      <section className="py-12 px-6 bg-[#ededed] ">
         <div className="max-w-7xl mx-auto transition-all duration-300 hover:scale-105">
           <div className="bg-white border border-gray-200 rounded-3xl px-8 md:px-12 py-8 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
             <p className="text-2xl md:text-3xl font-medium text-gray-900">
@@ -178,45 +178,40 @@ const FuturesPage = () => {
         </div>
       </section>
 
-      {/* Donate Section */}
-      <section id="donate" className="py-16 px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 text-center">
-            Our "Sophomore Solution"
-          </h2>
-
-          {/* Donation Embed Placeholder */}
-          <div className="bg-gray-100 rounded-2xl p-12 text-center shadow-lg">
-            <div className="max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Support Our Mission
-              </h3>
-              <p className="text-lg text-gray-700 mb-8">
-                Help us provide grants, mentorship, and community to the next
-                generation of changemakers.
-              </p>
-
-              {/* Donation Embed - Replace with actual embed code */}
-              <div className="bg-white rounded-xl p-8 shadow-md">
-                <p className="text-gray-600 mb-6">
-                  Donation form will be embedded here
-                </p>
-                <Link
-                  href="https://triibe.us/futures#donate"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-black px-4 py-2 text-white rounded-full font-semibold text-[16px] md:text-lg hover:bg-gray-800 hover:scale-105 transition-all duration-300"
-                >
-                  Donate Now
-                </Link>
-              </div>
-            </div>
+      {/* Donate Section with Zeffy Embed */}
+      <section id="donate" className=" bg-white">
+        <div className=" mx-auto">
+          {/* Zeffy Donation Embed */}
+          <div
+            className="w-full"
+            style={{
+              position: "relative",
+              overflow: "hidden",
+              height: "600px",
+            }}
+          >
+            <iframe
+              title="Donation form powered by Zeffy"
+              src="https://www.zeffy.com/embed/donation-form/our-sophomore-solution-2"
+              style={{
+                position: "absolute",
+                border: 0,
+                top: 0,
+                left: 0,
+                bottom: 0,
+                right: 0,
+                width: "100%",
+                height: "100%",
+              }}
+              allowFullScreen
+              allow="payment"
+            />
           </div>
         </div>
       </section>
 
       {/* TRIIBE FAQs */}
-      <section className="py-16 px-6 bg-gray-50">
+      <section className="py-16 px-6 bg-[#ededed]">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-12 text-center">
             TRIIBE FAQs

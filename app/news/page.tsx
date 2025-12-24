@@ -120,38 +120,37 @@ const NewsPage = () => {
       <Header />
 
       {/* Hero Section - Side by Side Layout */}
-      {/* Hero Section - Side by Side Layout */}
-      <section className="mt-20 pt-16  bg-gray-50 pb-16 ">
+      <section className="mt-10 md:mt-20 pt-6 md:pt-16  bg-gray-50  md:pb-16 ">
         <div className="max-w-7xl mx-auto ">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 ">
             {/* Left side - Image */}
-            <div className="relative w-full h-100 lg:h-158  ">
+            <div className="relative w-full h-100 md:h-158  ">
               <Image
                 src="https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/68bdd1969ad2629c5305e094_Square%20Banner%20Large.jpeg"
                 alt="TRIIBE News Banner"
                 fill
-                className="object-cover"
+                className="object-contain"
                 priority
               />
             </div>
 
             {/* Right side - Content */}
-            <div className="flex flex-col justify-center items-center px-8 lg:px-16 py-12 lg:py-0 bg-white">
+            <div className="flex  flex-col justify-center items-center px-8 lg:px-16 py-0 lg:py-0 bg-white">
               {/* Logos at top */}
-              <div className="flex items-center gap-8 mb-8">
+              <div className="flex  flex-col md:flex-row items-center gap-8 mb-8">
                 <Image
                   src="https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/690ebe8f0b105d3dea1ecfbf_The%20TRIIBUNE%20Black.png"
                   alt="The TRIIBUNE"
                   width={300}
                   height={60}
-                  className="object-contain"
+                  className="object-contain w-[175px] md:w-[300px]"
                 />
                 <Image
                   src="https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/690ec0097fad8b2d6aa19eec_Screenshot_2025-11-07_at_10.58.29_PM-removebg-preview.png"
                   alt="TRIIBE TALK"
                   width={250}
                   height={60}
-                  className="object-contain"
+                  className="object-contain w-[125px] md:w-[250px]"
                 />
               </div>
 
@@ -289,7 +288,10 @@ const NewsPage = () => {
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0  overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
               {/* Left side - Image */}
-              <div className="relative h-100 lg:h-125 w-full m-auto ">
+              <div
+                className="relative  h-64
+               md:h-125 w-full m-auto "
+              >
                 <Image
                   src={newsCards[0].image}
                   alt={newsCards[0].title}
@@ -300,7 +302,7 @@ const NewsPage = () => {
 
               {/* Right side - Content */}
               <div className="flex flex-col justify-center p-8 lg:p-12 bg-gray-50">
-                <div className="flex items-center gap-2 mb-4 text-sm text-gray-500 uppercase">
+                <div className="flex flex-wrap  items-center gap-2 mb-4 text-sm text-gray-500 uppercase">
                   <span className="bg-gray-200 px-3 py-1 rounded-full font-semibold">
                     {newsCards[0].date}
                   </span>
@@ -335,7 +337,7 @@ const NewsPage = () => {
                 rel="noopener noreferrer"
                 className="group block bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
               >
-                <div className="relative h-104 w-full">
+                <div className="relative md:h-104 h-64 w-64 md:w-full">
                   <Image
                     src={card.image}
                     alt={card.title}
@@ -343,16 +345,16 @@ const NewsPage = () => {
                     className="object-cover"
                   />
                 </div>
-                <div className="p-6 ">
-                  <div className="flex items-center gap-2 mb-3 text-sm text-gray-500 uppercase">
+                <div className="p-4 md:p-6 ">
+                  <div className="flex flex-wrap items-center gap-2 mb-3 text-xs text-gray-500 uppercase">
                     <span className="bg-gray-200 px-3 py-1 rounded-full text-xs text-gray-700 uppercase">
                       {card.date}
                     </span>
-                    <span>•</span>
+
                     <span className="bg-gray-200 px-3 py-1 rounded-full text-xs text-gray-700 uppercase">
                       {card.category}
                     </span>
-                    <span>•</span>
+
                     <span>{card.readTime}</span>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors">
@@ -368,8 +370,6 @@ const NewsPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      {/* CTA Section */}
       {/* CTA Section */}
       <section className="py-12 px-6 bg-gray-100 overflow-x-hidden">
         <div className="max-w-7xl mx-auto bg-white transition-all duration-300 hover:scale-105 rounded-3xl shadow-lg px-8 md:px-12 py-8 md:py-10">
