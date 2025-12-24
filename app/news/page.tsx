@@ -120,7 +120,7 @@ const NewsPage = () => {
       <Header />
 
       {/* Hero Section - Side by Side Layout */}
-      <section className="mt-10 md:mt-20 pt-6 md:pt-16  bg-gray-50  md:pb-16 ">
+      <section className="mt-14 md:mt-20 pt-6 md:pt-16  bg-gray-50  md:pb-16 ">
         <div className="max-w-7xl mx-auto ">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 ">
             {/* Left side - Image */}
@@ -337,7 +337,7 @@ const NewsPage = () => {
                 rel="noopener noreferrer"
                 className="group block bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
               >
-                <div className="relative md:h-104 h-64 w-64 md:w-full">
+                <div className="relative md:h-104 h-64  w-full">
                   <Image
                     src={card.image}
                     alt={card.title}

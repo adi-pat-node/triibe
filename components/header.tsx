@@ -12,11 +12,13 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <img
-              src="/images/headerlogo.png"
-              alt="TRIIBE"
-              className="h-20 w-auto"
-            />
+            <a href="/">
+              <img
+                src="/images/headerlogo.png"
+                alt="TRIIBE"
+                className="h-20 w-auto"
+              />
+            </a>
           </div>
 
           {/* Desktop Navigation */}
