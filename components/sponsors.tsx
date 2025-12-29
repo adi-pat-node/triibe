@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Sponsors() {
   const sponsors = [
     {
@@ -37,9 +39,11 @@ export default function Sponsors() {
               key={index}
               className="flex items-center justify-center w-full"
             >
-              <img
+              <Image
                 src={sponsor.logo || "/placeholder.svg"}
                 alt={sponsor.name}
+                width={128}
+                height={128}
                 className="h-20 md:h-32 w-auto object-contain grayscale"
               />
             </div>

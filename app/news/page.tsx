@@ -3,6 +3,20 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "News & Updates - Latest from TRIIBE",
+  description: "Stay updated with the latest news, achievements, and stories from TRIIBE's global community of change makers and mentorship programs.",
+  openGraph: {
+    title: "TRIIBE News & Updates",
+    description: "Read the latest updates and success stories from TRIIBE's community of change makers around the world.",
+    url: "https://triibe.us/news",
+  },
+  alternates: {
+    canonical: "https://triibe.us/news",
+  },
+};
 
 const NewsPage = () => {
   const newsCards = [
@@ -118,6 +132,7 @@ const NewsPage = () => {
   return (
     <main className="min-h-screen">
       <Header />
+      <h1 className="sr-only">News and Updates from TRIIBE</h1>
 
       {/* Hero Section - Side by Side Layout */}
       <section className="mt-14 md:mt-20 pt-6 md:pt-16  bg-gray-50  md:pb-16 ">

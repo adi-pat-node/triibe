@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -13,9 +14,12 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <a href="/">
-              <img
+              <Image
                 src="/images/headerlogo.png"
                 alt="TRIIBE"
+                width={80}
+                height={80}
+                priority
                 className="h-20 w-auto"
               />
             </a>

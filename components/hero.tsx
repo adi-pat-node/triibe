@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section className="pt-32 pb-12 md:pt-40 md:pb-16 bg-white">
@@ -6,9 +8,12 @@ export default function Hero() {
           {/* Left Column - Text Content */}
           <div>
             <div className="mb-8">
-              <img
+              <Image
                 src="/images/heroimage.png"
                 alt="TRIIBE Logo"
+                width={144}
+                height={144}
+                priority
                 className="h-20 md:h-36 w-auto"
               />
             </div>
@@ -46,28 +51,34 @@ export default function Hero() {
           <div className="hidden md:grid grid-cols-5 gap-4 h-125 mb-36 ">
             {/* Left Column - Two stacked images */}
             <div className="col-span-2 flex flex-col gap-4">
-              <div className="flex-1">
-                <img
+              <div className="flex-1 relative">
+                <Image
                   src="https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/6898dd8480516839592d9d12_IMG_6500.JPG"
                   alt="TRIIBE team holding sign"
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover"
                 />
               </div>
-              <div className="flex-1">
-                <img
+              <div className="flex-1 relative">
+                <Image
                   src="https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/6898ddc07f75042d7d5e1ada_IMG_1137.jpg"
                   alt="Panel discussion event"
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover"
                 />
               </div>
             </div>
 
             {/* Right Column - Single tall image */}
-            <div className="col-span-3">
-              <img
+            <div className="col-span-3 relative">
+              <Image
                 src="https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/6898ddc0d7fe900272e07504_IMG_1223.jpg"
                 alt="TRIIBE Changemaker Summit"
-                className="w-full h-full object-cover"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 40vw"
+                className="object-cover"
               />
             </div>
           </div>

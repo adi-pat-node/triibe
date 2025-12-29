@@ -9,7 +9,7 @@ export default function Testimonial() {
             to truly support my young changemaker in a way that was both meaningful and deeply rewarding."
           </p>
           <footer className="text-lg md:text-xl text-gray-300">
-            <a href="https://www.linkedin.com/in/imermanangels/" className="hover:text-white transition-colors">
+            <a href="https://www.linkedin.com/in/imermanangels/" className="hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
               - Jonny Imerman
             </a>
           </footer>
