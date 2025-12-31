@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "News & Updates - Latest from TRIIBE",
-  description: "Stay updated with the latest news, achievements, and stories from TRIIBE's global community of change makers and mentorship programs.",
+  description: "Stay updated with the latest  news, achievements, and stories from TRIIBE's global community of change makers and mentorship programs.",
   openGraph: {
     title: "TRIIBE News & Updates",
     description: "Read the latest updates and success stories from TRIIBE's community of change makers around the world.",
