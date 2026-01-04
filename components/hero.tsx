@@ -23,7 +23,7 @@ export default function Hero() {
             </h1> */}
 
             <h2 className="text-2xl md:text-3xl lg:text-3xl font-semibold text-black mb-6 leading-tight">
-              Helping young nonprofit founders achieve full-time careers
+              Helping next-gen nonprofit founders continue their work
             </h2>
 
             <p className="text-lg  text-gray-700 mb-8">
