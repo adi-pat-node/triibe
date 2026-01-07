@@ -15,9 +15,9 @@ export default function Home() {
       <Header />
       <Hero />
       <ProblemGraphic />
+      <Changemakers />
       <Sponsors />
       <Partners />
-      <Changemakers />
       <Footer />
       <Newsletter />
     </div>
