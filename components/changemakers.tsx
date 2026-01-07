@@ -38,6 +38,51 @@ export default function Changemakers() {
         "https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/68b4ca26ae82ac604cfa0e61_maya%2022.png",
       website: "https://www.seedclimatechange.org/",
     },
+
+    {
+      name: "VARUNI CHOPRA",
+      description:
+        "Empower senior citizens to confidently use technology by providing accessible and community-driven education that connects them to essential digital tools and services",
+      founded: "2022",
+      image: "/images/VaruniChopra.png", // Or /images/photo.jpg if it's in /public/images/
+      website: "https://helpinghandsmain.wixsite.com/mysite",
+    },
+
+    {
+      name: "Shrusti Amula",
+      description:
+        "Reduce food waste through compost and food recovery programs to combat climate change and food insecurity",
+      founded: "2025",
+      image: "/images/ShrustiAmula.png", // Or /images/photo.jpg if it's in /public/images/
+      website: "https://www.risenshinefoundation.org/",
+    },
+
+    {
+      name: "NAYLA JIMENEZ",
+      description:
+        "Advance pediatric health and educational equity in the Philippines through resource mobilization, cultural exchange, and community collaborations",
+      founded: "2019",
+      image: "/images/NaylaJimenez.png", // Or /images/photo.jpg if it's in /public/images/
+      website: "https://www.philippinehealthinitiative.org/",
+    },
+
+    {
+      name: "SAMIN BHAN",
+      description:
+        "Revive the culture of in-person interaction through a mobile app",
+      founded: "2022",
+      image: "/images/SaminBhan.png", // Or /images/photo.jpg if it's in /public/images/
+      website: "https://www.lookupp.net/",
+    },
+
+    {
+      name: "GITANJALI RAO",
+      description:
+        "Help other students discover their passion for innovation and STEM",
+      founded: "2020",
+      image: "/images/GitanjaliRao.png", // Or /images/photo.jpg if it's in /public/images/
+      website: "https://gitanjalirao.net/",
+    },
   ];
 
   return (

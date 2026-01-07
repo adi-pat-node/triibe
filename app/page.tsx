@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
-import Header from "@/components/header"
-import Hero from "@/components/hero"
+import Header from "@/components/header";
+import Hero from "@/components/hero";
+import ProblemGraphic from "@/components/problemgraphic";
 
 const Sponsors = dynamic(() => import("@/components/sponsors"));
 const Partners = dynamic(() => import("@/components/partners"));
@@ -13,11 +14,12 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <Header />
       <Hero />
+      <ProblemGraphic />
       <Sponsors />
       <Partners />
       <Changemakers />
       <Footer />
       <Newsletter />
     </div>
-  )
+  );
 }
