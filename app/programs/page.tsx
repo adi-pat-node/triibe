@@ -98,7 +98,7 @@ const ProgramsPage = () => {
       <Header />
 
       {/* First Hero - The Problem Statement */}
-      <section className="mt-20 py-16 px-6 bg-white">
+      <section className="mt-20 py-8 px-6 bg-white">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
             Nonprofit Founders Are Cut Off From Funding In College
@@ -107,7 +107,7 @@ const ProgramsPage = () => {
       </section>
 
       {/* Problem Visual/Infographic */}
-      <section className="py-12 px-6 bg-gray-50">
+      <section className="py-8 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="relative w-full h-100 md:h-125">
             <Image
@@ -121,7 +121,7 @@ const ProgramsPage = () => {
       </section>
 
       {/* Hero Section - Fellowship Description */}
-      <section className="py-16 px-6 bg-white">
+      <section className="py-8 px-6 bg-white">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
             A Three Year Fellowship for Cohorts of 5 Nonprofit Founders
@@ -130,7 +130,7 @@ const ProgramsPage = () => {
       </section>
 
       {/* Program Cards - Funding, Mentorship, Community */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-12 px-6 bg-white">
         <div className="max-w-7xl mx-auto space-y-32">
           {programCards.map((card, index) => (
             <div
