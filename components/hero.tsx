@@ -2,12 +2,12 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="pt-32 pb-12 md:pt-32 md:pb-8 bg-white">
+    <section className="pt-32 pb-12 md:pt-32 md:pb-.5 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text Content */}
           <div>
-            <div className="mb-8">
+            <div className="mb-8 md:mb-.5">
               <Image
                 src="/images/heroimage.png"
                 alt="TRIIBE Logo"
@@ -48,7 +48,7 @@ export default function Hero() {
           </div>
 
           {/* Right Column - Image Grid */}
-          <div className="hidden md:grid grid-cols-5 gap-4 h-125 mb-36 ">
+          <div className="hidden md:grid grid-cols-5 gap-4 h-125 mb-2 ">
             {/* Left Column - Two stacked images */}
             <div className="col-span-2 flex flex-col gap-4">
               <div className="flex-1 relative">

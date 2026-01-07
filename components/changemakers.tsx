@@ -41,9 +41,9 @@ export default function Changemakers() {
   ];
 
   return (
-    <section className="py-6 md:py-8 bg-white">
+    <section className="py-6 md:py-10 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <p className="text-base md:text-lg text-gray-600 mb-4">
             Our Changemakers
           </p>
