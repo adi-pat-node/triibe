@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="pt-32 pb-12 md:pt-40 md:pb-16 bg-white">
+    <section className="pt-32 pb-12 md:pt-32 md:pb-8 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text Content */}

@@ -19,9 +19,9 @@ export default function Partners() {
   ];
 
   return (
-    <section className="py-16  bg-gray-200">
+    <section className="py-4  bg-gray-200">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl  font-bold text-black mb-6">
             Meet our strategic partners
           </h2>
@@ -33,7 +33,7 @@ export default function Partners() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-center justify-items-center mt-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-center justify-items-center mt-8">
           {partners.map((partner, index) => (
             <div
               key={index}
@@ -49,7 +49,7 @@ export default function Partners() {
         </div>
 
         {/* Testimonial Quote */}
-        <div className="mt-20 max-w-5xl mx-auto text-center">
+        <div className="mt-8 max-w-5xl mx-auto text-center">
           <blockquote className="text-lg    text-gray-800 leading-relaxed mb-6">
             "TRIIBE's Mentorship Program is nothing short of astounding. With a
             busy schedule, I wasn't sure how much time I could give, but the
