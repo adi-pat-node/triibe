@@ -98,7 +98,7 @@ const ProgramsPage = () => {
       <Header />
 
       {/* First Hero - The Problem Statement */}
-      <section className="mt-20 py-8 px-6 bg-white">
+      <section className="mt-20 py-12 px-6 bg-white">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
             Nonprofit Founders Are Cut Off From Funding In College
@@ -109,12 +109,12 @@ const ProgramsPage = () => {
       {/* Problem Visual/Infographic */}
       <section className="py-8 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <div className="relative w-full h-100 md:h-125">
+          <div className="relative w-full h-100  ">
             <Image
               src="/images/problem_infographic.png"
               alt="The Problem - 80% of student-led nonprofits fade within a year"
               fill
-              className="object-contain"
+              className="object-contain "
             />
           </div>
         </div>
