@@ -33,10 +33,10 @@ export default function Hero() {
 
             <div className="flex flex-wrap gap-4">
               <a
-                href="/futures"
+                href="/programs"
                 className="px-6 py-3 text-sm font-medium text-black bg-white border border-black hover:bg-green-950 hover:text-white transition-colors rounded-[12px]"
               >
-                TRIIBE Futures
+                TRIIBE Programs
               </a>
               <a
                 href="/about-us"

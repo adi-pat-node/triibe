@@ -7,7 +7,7 @@ const DonatePage = () => {
   const router = useRouter();
 
   useEffect(() => {
-    router.push("/futures#donate");
+    router.push("/programs#donate");
   }, [router]);
 
   return null;

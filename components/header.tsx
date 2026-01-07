@@ -34,10 +34,10 @@ export default function Header() {
               Home
             </a>
             <a
-              href="/futures"
+              href="/programs"
               className="text-white hover:text-gray-300 transition-colors text-sm"
             >
-              Futures
+              Programs
             </a>
             <a
               href="/news"
@@ -102,10 +102,10 @@ export default function Header() {
                 Home
               </a>
               <a
-                href="/futures"
+                href="/programs"
                 className="text-white hover:text-gray-300 transition-colors text-sm"
               >
-                Futures
+                Programs
               </a>
               <a
                 href="/news"
