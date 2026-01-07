@@ -1,10 +1,12 @@
+import dynamic from "next/dynamic";
 import Header from "@/components/header"
 import Hero from "@/components/hero"
-import Sponsors from "@/components/sponsors"
-import Partners from "@/components/partners"
-import Changemakers from "@/components/changemakers"
-import Newsletter from "@/components/newsletter"
-import Footer from "@/components/footer"
+
+const Sponsors = dynamic(() => import("@/components/sponsors"));
+const Partners = dynamic(() => import("@/components/partners"));
+const Changemakers = dynamic(() => import("@/components/changemakers"));
+const Newsletter = dynamic(() => import("@/components/newsletter"));
+const Footer = dynamic(() => import("@/components/footer"));
 
 export default function Home() {
   return (

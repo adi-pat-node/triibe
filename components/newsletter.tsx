@@ -4,6 +4,7 @@ import type React from "react"
 
 import { useState, useEffect } from "react"
 import { X } from "lucide-react"
+import Image from "next/image"
 
 export default function Newsletter() {
   const [isVisible, setIsVisible] = useState(false)
@@ -35,7 +36,6 @@ export default function Newsletter() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("[v0] Newsletter subscription:", email)
     setIsVisible(false)
   }
 
@@ -57,9 +57,11 @@ export default function Newsletter() {
         </button>
 
         <div className="text-center mb-8">
-          <img
+          <Image
             src="https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/68b4c6db0418f1197a74e5ba_Asset%201%201.png"
             alt="TRIIBE"
+            width={64}
+            height={64}
             className="h-16 w-auto mx-auto mb-6"
           />
           <h3 className="text-2xl md:text-3xl font-bold text-black mb-4">Subscribe to the TRIIBUNE!</h3>

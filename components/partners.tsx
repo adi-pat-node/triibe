@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Partners() {
   const partners = [
     {
@@ -39,9 +41,11 @@ export default function Partners() {
               key={index}
               className="flex items-center justify-center w-full"
             >
-              <img
+              <Image
                 src={partner.logo || "/placeholder.svg"}
                 alt={partner.name}
+                width={128}
+                height={128}
                 className="h-12 md:h-32 w-auto object-contain"
               />
             </div>

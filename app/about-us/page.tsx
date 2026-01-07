@@ -3,6 +3,20 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us - Meet Our Team and Mission",
+  description: "Learn about TRIIBE's mission to support young change makers and meet our dedicated team of leaders working to advance social impact initiatives across the globe.",
+  openGraph: {
+    title: "About TRIIBE - Our Team and Mission",
+    description: "Meet the dedicated team behind TRIIBE and learn about our mission to support the next generation of change makers.",
+    url: "https://triibe.us/about-us",
+  },
+  alternates: {
+    canonical: "https://triibe.us/about-us",
+  },
+};
 
 const AboutUsPage = () => {
   const teamMembers = [
@@ -285,9 +299,9 @@ const AboutUsPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-2 items-center ">
             {/* Left side - Text content */}
             <div className="text-center lg:text-left  mx-auto">
-              <h3 className="text-lg md:text-2xl mb-4 font-medium text-center">
+              <p className="text-lg md:text-2xl mb-4 font-medium text-center">
                 Real Problems <br /> Cannot Be Solved Alone
-              </h3>
+              </p>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 text-center">
                 It Takes A
               </h1>

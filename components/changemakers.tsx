@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Changemakers() {
   const changemakers = [
     {
@@ -61,10 +63,12 @@ export default function Changemakers() {
             >
               <div key={index} className="group cursor-pointer">
                 <div className="relative h-80 md:h-104 overflow-hidden rounded-2xl">
-                  <img
+                  <Image
                     src={changemaker.image}
                     alt={changemaker.name}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
 
                   {/* Gradient overlay */}
