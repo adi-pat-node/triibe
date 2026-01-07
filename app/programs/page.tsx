@@ -6,7 +6,7 @@ import Footer from "@/components/footer";
 import Link from "next/link";
 import Image from "next/image";
 
-const FuturesPage = () => {
+const ProgramsPage = () => {
   const [visibleSections, setVisibleSections] = useState<Set<number>>(
     new Set()
   );
@@ -39,27 +39,27 @@ const FuturesPage = () => {
     };
   }, []);
 
-  const scrollCards = [
+  const programCards = [
     {
-      title: "The Problem",
+      title: "Funding",
       description:
-        "Over 4,000 student-led nonprofits exist in the U.S. but nearly 80% fade within a year - Palorah Capital\n\nLess Than 1% Of Climate Funding Reaches Youth Organizations - Youth Climate Justice Fund",
-      image:
-        "https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/6898dd8480516839592d9d12_IMG_6500.JPG",
-    },
-    {
-      title: "Our Model",
-      description:
-        "College is a rare window of opportunity, a space before real-world pressures fully set in. That's where TRIIBE comes in: three years of tailored support to cohorts of five experienced nonprofit founders each semester.",
+        "[PLACEHOLDER - Awaiting confirmation]\n\nThree scaling grants:\n• $5,000 for sophomores\n• $10,000 for juniors\n• $25,000 for seniors\n\nThe largest grants a nonprofit founder in college can receive.",
       image:
         "https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/6898ddc07f75042d7d5e1ada_IMG_1137.jpg",
     },
     {
-      title: "We Provide",
+      title: "Mentorship",
       description:
-        "Individually: Three scaling grants ($5K, $10K, $25K), personalized documentaries, podcasts, and two mentors each quarter.\n\nCollectively: Annual Changemaker Summit, annual retreat, and monthly TRIIBE sessions.",
+        "Two mentors each quarter meeting for one hour each month. We provide two dozen executive-level mentors throughout the course of the program, as well as financial counsel, legal templates, and grant writing support.",
       image:
         "https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/68ae1ac49cdf1ecf2ff188cc_1755817640722.jpeg",
+    },
+    {
+      title: "Community",
+      description:
+        "Each year we host our cohorts in New York City for an annual Changemaker Summit, where next-gen are the focus, not the footnote. We also host annual retreats to strengthen bonds and create space for rest, reflection, and renewed focus.",
+      image:
+        "https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/6898dd8480516839592d9d12_IMG_6500.JPG",
     },
   ];
 
@@ -96,30 +96,81 @@ const FuturesPage = () => {
     <main className="min-h-screen">
       <Header />
 
-      {/* Hero Section with Animated Text */}
-      <section className="mt-20 pt-20 pb-32 px-6 bg-linear-to-b from-gray-50 to-white min-h-screen flex items-center">
-        <div className="max-w-5xl mx-auto">
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-gray-900 leading-tight text-center">
-            <span className="block mb-4 animate-fade-in-up">
-              We are the night sky
-            </span>
-            <span className="block mb-4 animate-fade-in-up animation-delay-200">
-              That lets the stars
-            </span>
-            <span className="block mb-4 animate-fade-in-up animation-delay-400">
-              Burn Bright not
-            </span>
-            <span className="block animate-fade-in-up animation-delay-600">
-              Burnout
-            </span>
+      {/* The Problem Section - FIRST TIME */}
+      <section className="mt-20 py-20 px-6 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
+            <div>
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+                The Problem
+              </h3>
+              <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line">
+                Over 4,000 student-led nonprofits exist in the U.S. but nearly
+                80% fade within a year - Palorah Capital
+                {"\n\n"}
+                Less Than 1% Of Climate Funding Reaches Youth Organizations -
+                Youth Climate Justice Fund
+              </p>
+            </div>
+
+            {/* Image */}
+            <div className="relative h-100 lg:h-125 rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/6898dd8480516839592d9d12_IMG_6500.JPG"
+                alt="The Problem"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Hero Section - Fellowship Description */}
+      <section className="py-16 px-6 bg-gray-50">
+        <div className="max-w-5xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+            A Three Year Fellowship for Cohorts of 5 Nonprofit Founders
           </h1>
         </div>
       </section>
 
-      {/* Scroll-triggered Cards Section */}
+      {/* The Problem Section - SECOND TIME (Repeated) */}
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
+            <div>
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+                The Problem
+              </h3>
+              <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line">
+                Over 4,000 student-led nonprofits exist in the U.S. but nearly
+                80% fade within a year - Palorah Capital
+                {"\n\n"}
+                Less Than 1% Of Climate Funding Reaches Youth Organizations -
+                Youth Climate Justice Fund
+              </p>
+            </div>
+
+            {/* Image */}
+            <div className="relative h-100 lg:h-125 rounded-2xl overflow-hidden shadow-xl lg:order-first">
+              <Image
+                src="https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/6898dd8480516839592d9d12_IMG_6500.JPG"
+                alt="The Problem"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Program Cards - Funding, Mentorship, Community */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-7xl mx-auto space-y-32">
-          {scrollCards.map((card, index) => (
+          {programCards.map((card, index) => (
             <div
               key={index}
               ref={(el) => {
@@ -160,14 +211,14 @@ const FuturesPage = () => {
       </section>
 
       {/* Full Overview Banner */}
-      <section className="py-12 px-6 bg-[#ededed] ">
+      <section className="py-12 px-6 bg-[#ededed]">
         <div className="max-w-7xl mx-auto transition-all duration-300 hover:scale-105">
           <div className="bg-white border border-gray-200 rounded-3xl px-8 md:px-12 py-8 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
             <p className="text-2xl md:text-3xl font-medium text-gray-900">
-              For a full overview, see our 1-pager
+              For a full overview, see our deck
             </p>
             <Link
-              href="https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/68d9b6e34d7c2203303b07c4_TRIIBE%20Executive%20Summary.pdf"
+              href="https://drive.google.com/file/d/1XxPb8UfeLXAVUy2zl0mle1lkUe7A2q1K/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="border-2 border-black text-black px-10 py-3 rounded-full font-semibold text-base hover:bg-black hover:text-white hover:scale-105 transition-all duration-300 whitespace-nowrap"
@@ -179,8 +230,8 @@ const FuturesPage = () => {
       </section>
 
       {/* Donate Section with Zeffy Embed */}
-      <section id="donate" className=" bg-white">
-        <div className=" mx-auto">
+      <section id="donate" className="bg-white">
+        <div className="mx-auto">
           {/* Zeffy Donation Embed */}
           <div
             className="w-full"
@@ -296,4 +347,4 @@ const FuturesPage = () => {
   );
 };
 
-export default FuturesPage;
+export default ProgramsPage;
