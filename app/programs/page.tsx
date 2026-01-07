@@ -43,7 +43,8 @@ const ProgramsPage = () => {
     {
       title: "Funding",
       description:
-        "[PLACEHOLDER - Awaiting confirmation]\n\nThree scaling grants:\n• $5,000 for sophomores\n• $10,000 for juniors\n• $25,000 for seniors\n\nThe largest grants a nonprofit founder in college can receive.",
+        "Three scaling grants:\n• $5,000 for sophomores\n• $10,000 for juniors\n• $25,000 for seniors",
+
       image:
         "https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/6898ddc07f75042d7d5e1ada_IMG_1137.jpg",
     },
@@ -96,74 +97,35 @@ const ProgramsPage = () => {
     <main className="min-h-screen">
       <Header />
 
-      {/* The Problem Section - FIRST TIME */}
-      <section className="mt-20 py-20 px-6 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Text Content */}
-            <div>
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-                The Problem
-              </h3>
-              <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line">
-                Over 4,000 student-led nonprofits exist in the U.S. but nearly
-                80% fade within a year - Palorah Capital
-                {"\n\n"}
-                Less Than 1% Of Climate Funding Reaches Youth Organizations -
-                Youth Climate Justice Fund
-              </p>
-            </div>
+      {/* First Hero - The Problem Statement */}
+      <section className="mt-20 py-16 px-6 bg-white">
+        <div className="max-w-5xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+            Nonprofit Founders Are Cut Off From Funding In College
+          </h1>
+        </div>
+      </section>
 
-            {/* Image */}
-            <div className="relative h-100 lg:h-125 rounded-2xl overflow-hidden shadow-xl">
-              <Image
-                src="https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/6898dd8480516839592d9d12_IMG_6500.JPG"
-                alt="The Problem"
-                fill
-                className="object-cover"
-              />
-            </div>
+      {/* Problem Visual/Infographic */}
+      <section className="py-12 px-6 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="relative w-full h-100 md:h-125">
+            <Image
+              src="/images/problem_infographic.png"
+              alt="The Problem - 80% of student-led nonprofits fade within a year"
+              fill
+              className="object-contain"
+            />
           </div>
         </div>
       </section>
 
       {/* Hero Section - Fellowship Description */}
-      <section className="py-16 px-6 bg-gray-50">
+      <section className="py-16 px-6 bg-white">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
             A Three Year Fellowship for Cohorts of 5 Nonprofit Founders
           </h1>
-        </div>
-      </section>
-
-      {/* The Problem Section - SECOND TIME (Repeated) */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Text Content */}
-            <div>
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-                The Problem
-              </h3>
-              <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line">
-                Over 4,000 student-led nonprofits exist in the U.S. but nearly
-                80% fade within a year - Palorah Capital
-                {"\n\n"}
-                Less Than 1% Of Climate Funding Reaches Youth Organizations -
-                Youth Climate Justice Fund
-              </p>
-            </div>
-
-            {/* Image */}
-            <div className="relative h-100 lg:h-125 rounded-2xl overflow-hidden shadow-xl lg:order-first">
-              <Image
-                src="https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/6898dd8480516839592d9d12_IMG_6500.JPG"
-                alt="The Problem"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
         </div>
       </section>
 
