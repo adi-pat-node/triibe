@@ -9,12 +9,12 @@ export default function Hero() {
           <div>
             <div className="mb-8 md:mb-.5">
               <Image
-                src="/images/heroimage.png"
+                src="/images/TriibeHero.svg"
                 alt="TRIIBE Logo"
                 width={144}
                 height={144}
                 priority
-                className="h-20 md:h-36 w-auto"
+                className="h-20 md:h-36 w-auto object-cover"
               />
             </div>
 

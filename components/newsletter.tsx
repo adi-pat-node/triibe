@@ -1,49 +1,49 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState, useEffect } from "react"
-import { X } from "lucide-react"
-import Image from "next/image"
+import { useState, useEffect } from "react";
+import { X } from "lucide-react";
+import Image from "next/image";
 
 export default function Newsletter() {
-  const [isVisible, setIsVisible] = useState(false)
-  const [email, setEmail] = useState("")
-  const [hasShown, setHasShown] = useState(false)
+  const [isVisible, setIsVisible] = useState(false);
+  const [email, setEmail] = useState("");
+  const [hasShown, setHasShown] = useState(false);
 
   useEffect(() => {
-    const modalShown = sessionStorage.getItem("newsletter-shown")
+    const modalShown = sessionStorage.getItem("newsletter-shown");
 
     if (modalShown) {
-      return
+      return;
     }
 
     const handleScroll = () => {
       if (window.scrollY > 300 && !hasShown) {
-        setIsVisible(true)
-        setHasShown(true)
-        sessionStorage.setItem("newsletter-shown", "true")
-        window.removeEventListener("scroll", handleScroll)
+        setIsVisible(true);
+        setHasShown(true);
+        sessionStorage.setItem("newsletter-shown", "true");
+        window.removeEventListener("scroll", handleScroll);
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [hasShown])
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [hasShown]);
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsVisible(false)
-  }
+    e.preventDefault();
+    setIsVisible(false);
+  };
 
   const handleClose = () => {
-    setIsVisible(false)
-  }
+    setIsVisible(false);
+  };
 
-  if (!isVisible) return null
+  if (!isVisible) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40">
@@ -58,15 +58,18 @@ export default function Newsletter() {
 
         <div className="text-center mb-8">
           <Image
-            src="https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/68b4c6db0418f1197a74e5ba_Asset%201%201.png"
+            src="/images/TriibeHero.svg"
             alt="TRIIBE"
             width={64}
             height={64}
             className="h-16 w-auto mx-auto mb-6"
           />
-          <h3 className="text-2xl md:text-3xl font-bold text-black mb-4">Subscribe to the TRIIBUNE!</h3>
+          <h3 className="text-2xl md:text-3xl font-bold text-black mb-4">
+            Subscribe to the TRIIBUNE!
+          </h3>
           <p className="text-base text-gray-700">
-            Monthly updates on our impact, new projects, and ways to get involved!
+            Monthly updates on our impact, new projects, and ways to get
+            involved!
           </p>
         </div>
 
@@ -95,5 +98,5 @@ export default function Newsletter() {
         </form>
       </div>
     </div>
-  )
+  );
 }
