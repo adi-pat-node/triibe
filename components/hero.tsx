@@ -48,10 +48,11 @@ export default function Hero() {
           </div>
 
           {/* Right Column - Image Grid */}
-          <div className="hidden md:grid grid-cols-5 gap-4 h-125 mb-2 ">
+          <div className="hidden md:grid grid-cols-5 gap-4 h-125 mb-2">
             {/* Left Column - Two stacked images */}
             <div className="col-span-2 flex flex-col gap-4">
-              <div className="flex-1 relative">
+              {/* Top-left image */}
+              <div className="flex-1 relative rounded-tl-2xl overflow-hidden">
                 <Image
                   src="https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/6898dd8480516839592d9d12_IMG_6500.JPG"
                   alt="TRIIBE team holding sign"
@@ -60,7 +61,9 @@ export default function Hero() {
                   className="object-cover"
                 />
               </div>
-              <div className="flex-1 relative">
+
+              {/* Bottom-left image */}
+              <div className="flex-1 relative rounded-bl-2xl overflow-hidden">
                 <Image
                   src="https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/6898ddc07f75042d7d5e1ada_IMG_1137.jpg"
                   alt="Panel discussion event"
@@ -72,7 +75,7 @@ export default function Hero() {
             </div>
 
             {/* Right Column - Single tall image */}
-            <div className="col-span-3 relative">
+            <div className="col-span-3 relative rounded-tr-2xl rounded-br-2xl overflow-hidden">
               <Image
                 src="https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/6898ddc0d7fe900272e07504_IMG_1223.jpg"
                 alt="TRIIBE Changemaker Summit"

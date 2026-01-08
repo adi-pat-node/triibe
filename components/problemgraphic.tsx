@@ -7,12 +7,14 @@ export default function ProblemGraphic() {
 
       <div className="max-w-7xl mx-auto">
         <div className="relative w-full h-100  ">
-          <Image
-            src="/images/problem_infographic.png"
-            alt="The Problem - 80% of student-led nonprofits fade within a year"
-            fill
-            className="object-contain "
-          />
+          <div className="relative w-full h-100 rounded-2xl overflow-hidden bg-white">
+            <Image
+              src="/images/problem_infographic.png"
+              alt="The Problem - 80% of student-led nonprofits fade within a year"
+              fill
+              className="object-contain "
+            />
+          </div>
         </div>
       </div>
     </section>

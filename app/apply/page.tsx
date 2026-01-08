@@ -108,7 +108,7 @@ const ApplyPage = () => {
             {/* Left side - Image (shown first on desktop, second on mobile) */}
             <div className="relative order-2 lg:order-1 h-[200px] md:h-[400px] lg:h-[750px] flex flex-col justify-center lg:transform lg:-rotate-12 lg:space-y-4 w-full lg:w-[90%]">
               {/* Single image on mobile, first image on desktop */}
-              <div className="relative w-full h-full lg:h-[45%]">
+              <div className="relative w-full h-full lg:h-[45%] rounded-2xl overflow-hidden">
                 <Image
                   src="https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/68d9bbcf0bdd736b2984b89f_Screenshot%202025-09-28%20at%206.50.46%E2%80%AFPM.png"
                   alt="TRIIBE Support"
@@ -119,7 +119,7 @@ const ApplyPage = () => {
               </div>
 
               {/* Second image - only visible on desktop */}
-              <div className="relative w-full h-[45%] hidden lg:block">
+              <div className="relative w-full h-[45%] hidden lg:block rounded-2xl overflow-hidden">
                 <Image
                   src="https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/68d9bbcf0bdd736b2984b89f_Screenshot%202025-09-28%20at%206.50.46%E2%80%AFPM.png"
                   alt="TRIIBE Support"

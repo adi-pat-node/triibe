@@ -141,7 +141,7 @@ const NewsPage = () => {
         <div className="max-w-7xl mx-auto ">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 ">
             {/* Left side - Image */}
-            <div className="relative w-full h-100 md:h-158  ">
+            <div className="relative w-full h-100 md:h-158  rounded-2xl overflow-hidden">
               <Image
                 src="https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/68bdd1969ad2629c5305e094_Square%20Banner%20Large.jpeg"
                 alt="TRIIBE News Banner"
@@ -152,9 +152,9 @@ const NewsPage = () => {
             </div>
 
             {/* Right side - Content */}
-            <div className="flex  flex-col justify-center items-center px-8 lg:px-16 py-0 lg:py-0 bg-white">
+            <div className="flex  flex-col justify-center items-center px-8 lg:px-16 py-0 lg:py-0 bg-white rounded ">
               {/* Logos at top */}
-              <div className="flex  flex-col md:flex-row items-center gap-8 mb-8">
+              <div className="flex  flex-col md:flex-row items-center gap-8 mb-8 ">
                 <Image
                   src="https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/690ebe8f0b105d3dea1ecfbf_The%20TRIIBUNE%20Black.png"
                   alt="The TRIIBUNE"
@@ -307,7 +307,7 @@ const NewsPage = () => {
               {/* Left side - Image */}
               <div
                 className="relative  h-64
-               md:h-125 w-full m-auto "
+               md:h-125 w-full m-auto rounded-2xl overflow-hidden"
               >
                 <Image
                   src={newsCards[0].image}
@@ -354,7 +354,7 @@ const NewsPage = () => {
                 rel="noopener noreferrer"
                 className="group block bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
               >
-                <div className="relative md:h-104 h-64  w-full">
+                <div className="relative md:h-104 h-64  w-full rounded-2xl overflow-hidden">
                   <Image
                     src={card.image}
                     alt={card.title}
