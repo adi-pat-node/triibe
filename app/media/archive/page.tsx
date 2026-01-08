@@ -131,7 +131,7 @@ const ArchivePage = () => {
       <Header />
 
       {/* Header */}
-      <section className="py-4 mt-14 md:mt-20">
+      <section className="py-4 mt-20 ">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <Link
             href="/media"
