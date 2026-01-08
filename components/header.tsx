@@ -3,9 +3,18 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const navClass = (path: string) =>
+    `text-white hover:text-gray-300 transition-colors text-sm ${
+      pathname === path ? "font-bold" : "font-normal"
+    }`;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-green-950">
@@ -27,36 +36,27 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
-            <a
+            {/*<a
               href="/"
               className="text-white hover:text-gray-300 transition-colors text-sm"
             >
               Home
-            </a>
-            <a
-              href="/programs"
-              className="text-white hover:text-gray-300 transition-colors text-sm"
-            >
+            </a>*/}
+            <Link href="/" className={navClass("/")}>
+            Home
+            </Link>
+            <Link href="/programs" className={navClass("/programs")}>
               Programs
-            </a>
-            <a
-              href="/news"
-              className="text-white hover:text-gray-300 transition-colors text-sm"
-            >
-              News
-            </a>
-            <a
-              href="/about-us"
-              className="text-white hover:text-gray-300 transition-colors text-sm"
-            >
-              About Us
-            </a>
-            <a
-              href="/contact-us"
-              className="text-white hover:text-gray-300 transition-colors text-sm"
-            >
-              Contact Us
-            </a>
+            </Link>
+            <Link href="/news" className={navClass("/news")}>
+            News
+            </Link>
+            <Link href="/about-us" className={navClass("/about-us")}>
+            About Us
+            </Link>
+            <Link href="/contact-us" className={navClass("/contact-us")}>
+            Contact Us
+            </Link>
           </div>
 
           {/* Desktop CTA Buttons */}
@@ -95,36 +95,22 @@ export default function Header() {
         {mobileMenuOpen && (
           <div className="lg:hidden pb-4 border-t border-gray-800 mt-4">
             <div className="flex flex-col gap-4 pt-4">
-              <a
-                href="/"
-                className="text-white hover:text-gray-300 transition-colors text-sm"
-              >
+              <Link href="/" className={navClass("/")}>
                 Home
-              </a>
-              <a
-                href="/programs"
-                className="text-white hover:text-gray-300 transition-colors text-sm"
-              >
+              </Link>
+              <Link href="/programs" className={navClass("/programs")}>
                 Programs
-              </a>
-              <a
-                href="/news"
-                className="text-white hover:text-gray-300 transition-colors text-sm"
-              >
+              </Link>
+              <Link href="/news" className={navClass("/news")}>
                 News
-              </a>
-              <a
-                href="/about-us"
-                className="text-white hover:text-gray-300 transition-colors text-sm"
-              >
+              </Link>
+              <Link href="/about-us" className={navClass("/about-us")}>
                 About Us
-              </a>
-              <a
-                href="/contact-us"
-                className="text-white hover:text-gray-300 transition-colors text-sm"
-              >
+              </Link>
+              <Link href="/contact-us" className={navClass("/contact-us")}>
                 Contact Us
-              </a>
+              </Link>
+
               <div className="flex flex-col gap-3 pt-4">
                 <a
                   href="/apply"
