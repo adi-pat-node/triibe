@@ -135,7 +135,7 @@ export default function Changemakers() {
             Our Changemakers
           </p>
           <h2 className="text-3xl font-bold text-black">
-            Sustaining 24 years of nonprofit service
+            Sustaining 61 years of nonprofit service
           </h2>
         </div>
 

@@ -8,7 +8,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-green-950">
       <nav className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -63,13 +63,13 @@ export default function Header() {
           <div className="hidden lg:flex items-center gap-4">
             <a
               href="/apply"
-              className="px-6 py-2.5 text-sm font-medium text-black bg-white hover:bg-gray-100 transition-colors rounded"
+              className="px-6 py-2.5 text-sm font-medium text-black bg-white border  hover:bg-green-950 hover:text-white  hover:border-white rounded   transform transition-transform hover:scale-105"
             >
               Apply
             </a>
             <a
               href="/donate"
-              className="px-6 py-2.5 text-sm font-medium text-black bg-white hover:bg-gray-100 transition-colors rounded"
+              className="px-6 py-2.5 text-sm font-medium text-black bg-white border hover:bg-green-950 hover:text-white hover:border-white rounded   transform transition-transform hover:scale-105 "
             >
               Donate
             </a>
@@ -128,13 +128,13 @@ export default function Header() {
               <div className="flex flex-col gap-3 pt-4">
                 <a
                   href="/apply"
-                  className="px-6 py-2.5 text-center text-sm font-medium text-black bg-white hover:bg-gray-100 transition-colors rounded"
+                  className="px-6 py-2.5 text-center text-sm font-medium text-black bg-white border  hover:bg-green-950 hover:text-white transition-colors hover:border-white rounded"
                 >
                   Apply
                 </a>
                 <a
                   href="/donate"
-                  className="px-6 py-2.5 text-center text-sm font-medium text-black bg-white hover:bg-gray-100 transition-colors rounded"
+                  className="px-6 py-2.5 text-center text-sm font-medium text-black bg-white border  hover:bg-green-950 hover:text-white transition-colors hover:border-white rounded"
                 >
                   Donate
                 </a>

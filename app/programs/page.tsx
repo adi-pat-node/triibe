@@ -183,7 +183,7 @@ const ProgramsPage = () => {
               href="https://drive.google.com/file/d/1XxPb8UfeLXAVUy2zl0mle1lkUe7A2q1K/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
-              className="border-2 border-black text-black px-10 py-3 rounded-full font-semibold text-base hover:bg-black hover:text-white hover:scale-105 transition-all duration-300 whitespace-nowrap"
+              className="border-2 border-black text-black px-10 py-3 rounded-full font-semibold text-base hover:bg-green-950 hover:text-white hover:scale-105 transition-all duration-300 whitespace-nowrap"
             >
               View
             </Link>

@@ -7,10 +7,12 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About Us - Meet Our Team and Mission",
-  description: "Learn about TRIIBE's mission to support young change makers and meet our dedicated team of leaders working to advance social impact initiatives across the globe.",
+  description:
+    "Learn about TRIIBE's mission to support young change makers and meet our dedicated team of leaders working to advance social impact initiatives across the globe.",
   openGraph: {
     title: "About TRIIBE - Our Team and Mission",
-    description: "Meet the dedicated team behind TRIIBE and learn about our mission to support the next generation of change makers.",
+    description:
+      "Meet the dedicated team behind TRIIBE and learn about our mission to support the next generation of change makers.",
     url: "https://triibe.us/about-us",
   },
   alternates: {
@@ -299,25 +301,28 @@ const AboutUsPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-2 items-center ">
             {/* Left side - Text content */}
             <div className="text-center lg:text-left  mx-auto">
-              <p className="text-lg md:text-2xl mb-4 font-medium text-center">
-                Real Problems <br /> Cannot Be Solved Alone
+              <p className=" text-3xl md:text-5xl  font-bold text-gray-900 mb-4 text-center ">
+                Real Problems <br /> Cannot Be Solved Alone <br /> It Takes A
               </p>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 text-center">
-                It Takes A
-              </h1>
               <div className="mb-8">
                 <Image
                   src="https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/68b4c6db0418f1197a74e5ba_Asset%201%201.png"
                   alt="TRIIBE"
                   width={300}
                   height={120}
-                  className="mx-auto lg:mx-0"
+                  className="mx-auto "
                 />
               </div>
-              <div className="flex justify-center">
+              <div className="flex flex-wrap  justify-center gap-8">
+                <Link
+                  href="/programs"
+                  className="inline-flex bg-white border border-black text-black px-8 py-2 font-semibold text-lg hover:text-white rounded-[12px] hover:bg-green-950 hover:scale-105 transition-all duration-300"
+                >
+                  Programs
+                </Link>
                 <Link
                   href="/contact-us"
-                  className="inline-flex bg-black text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-800 hover:scale-105 transition-all duration-300"
+                  className="inline-flex bg-white border border-black text-black px-8 py-2 rounded-[12px] font-semibold text-lg hover:text-white hover:bg-green-950 hover:scale-105 transition-all duration-300"
                 >
                   Contact Us
                 </Link>

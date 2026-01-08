@@ -6,10 +6,12 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact Us - Get in Touch with TRIIBE",
-  description: "Contact TRIIBE to learn more about our mentorship programs, volunteer opportunities, and how you can support the next generation of change makers.",
+  description:
+    "Contact TRIIBE to learn more about our mentorship programs, volunteer opportunities, and how you can support the next generation of change makers.",
   openGraph: {
     title: "Contact TRIIBE - Get in Touch",
-    description: "Reach out to learn more about our programs and how you can get involved with TRIIBE's mission.",
+    description:
+      "Reach out to learn more about our programs and how you can get involved with TRIIBE's mission.",
     url: "https://triibe.us/contact-us",
   },
   alternates: {
@@ -94,7 +96,7 @@ const ContactPage = () => {
                 href="https://mailchi.mp/triibe.us/subscribe-to-triibe"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-2 border-black text-black px-8 py-3 rounded-full font-semibold text-base hover:bg-black hover:text-white transition-all duration-300"
+                className="border-2 border-black text-black px-8 py-3 rounded-[12px] font-semibold text-base hover:bg-green-950 hover:text-white transition-all duration-300 hover:scale-105"
               >
                 Our Newsletter
               </Link>

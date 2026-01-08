@@ -157,7 +157,7 @@ const ApplyPage = () => {
               href="https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/692f473df726f9d2f9b421be_TRIIBE%20Executive%20Summary.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="border-2 border-black text-black px-10 py-3 rounded-full font-semibold text-base hover:bg-black hover:text-white transition-all duration-300 whitespace-nowrap"
+              className="border-2 border-black text-black px-10 py-3 rounded-full font-semibold text-base hover:bg-green-950 hover:text-white transition-all duration-300 whitespace-nowrap"
             >
               View
             </Link>

@@ -7,10 +7,12 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "News & Updates - Latest from TRIIBE",
-  description: "Stay updated with the latest news, achievements, and stories from TRIIBE's global community of change makers and mentorship programs.",
+  description:
+    "Stay updated with the latest news, achievements, and stories from TRIIBE's global community of change makers and mentorship programs.",
   openGraph: {
     title: "TRIIBE News & Updates",
-    description: "Read the latest updates and success stories from TRIIBE's community of change makers around the world.",
+    description:
+      "Read the latest updates and success stories from TRIIBE's community of change makers around the world.",
     url: "https://triibe.us/news",
   },
   alternates: {
@@ -396,7 +398,7 @@ const NewsPage = () => {
               href="https://mailchi.mp/triibe.us/subscribe-to-triibe"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white text-black border-2 border-black px-8 py-3 rounded-full font-semibold text-base hover:bg-black hover:text-white   transition-all duration-300 whitespace-nowrap self-start md:self-center"
+              className="bg-white text-black border-2 border-black px-8 py-3 rounded-full font-semibold text-base hover:bg-green-950 hover:text-white   transition-all duration-300 whitespace-nowrap self-start md:self-center"
             >
               Subscribe
             </Link>

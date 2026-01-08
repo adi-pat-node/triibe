@@ -34,13 +34,13 @@ export default function Hero() {
             <div className="flex flex-wrap gap-4">
               <a
                 href="/programs"
-                className="px-6 py-3 text-sm font-medium text-black bg-white border border-black hover:bg-green-950 hover:text-white transition-colors rounded-[12px]"
+                className="px-6 py-3 text-sm font-medium text-black bg-white border border-black hover:bg-green-950 hover:text-white  rounded-[12px] transform transition-transform hover:scale-105"
               >
                 TRIIBE Programs
               </a>
               <a
                 href="/about-us"
-                className="px-6 py-3 text-sm font-medium text-black bg-white border rounded-[12px] border-black hover:bg-green-950 hover:text-white transition-colors"
+                className="px-6 py-3 text-sm font-medium text-black bg-white border rounded-[12px] border-black hover:bg-green-950 hover:text-white transform transition-transform hover:scale-105"
               >
                 About
               </a>
