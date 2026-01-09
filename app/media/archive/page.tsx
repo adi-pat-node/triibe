@@ -20,7 +20,7 @@ const ArchivePage = () => {
           link: "https://www.youtube.com/watch?v=XNUr1NgLq28",
         },
         {
-          image: "/images/workshop.png",
+          image: "/images/Workshop.png",
           category: "workshop",
           title: "Signal to Noise Branding",
           description:

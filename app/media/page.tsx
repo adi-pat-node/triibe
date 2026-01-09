@@ -405,7 +405,7 @@ const MediaPage = () => {
                 >
                   <div className="relative aspect-video">
                     <Image
-                      src="/images/workshop.png"
+                      src="/images/Workshop.png"
                       alt="Leadership Workshop"
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
