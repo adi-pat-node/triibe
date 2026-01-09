@@ -40,10 +40,10 @@ export default function Header() {
               Programs
             </a>
             <a
-              href="/news"
+              href="/media"
               className="text-white hover:text-gray-300 transition-colors text-sm"
             >
-              News
+              Media
             </a>
             <a
               href="/about-us"
@@ -108,10 +108,10 @@ export default function Header() {
                 Programs
               </a>
               <a
-                href="/news"
+                href="/media"
                 className="text-white hover:text-gray-300 transition-colors text-sm"
               >
-                News
+                Media
               </a>
               <a
                 href="/about-us"

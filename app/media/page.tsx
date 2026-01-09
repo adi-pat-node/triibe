@@ -194,7 +194,7 @@ const MediaPage = () => {
               <div className="relative w-full h-100 md:h-158  rounded-2xl overflow-hidden">
                 <Image
                   src="https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/68bdd1969ad2629c5305e094_Square%20Banner%20Large.jpeg"
-                  alt="TRIIBE News Banner"
+                  alt="TRIIBE Media Banner"
                   fill
                   className="object-contain"
                   priority
@@ -206,69 +206,20 @@ const MediaPage = () => {
             <div className="text-center md:text-left">
               <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
                 Introducing
-                <br />
-                <span className=" bg-clip-text  text-black">TRIIBE TALK</span>
               </h2>
-              <p className="text-xl md:text-2xl text-gray-600 font-medium">
-                Alternating, actionable lessons from current and next-gen
-                changemakers.
-              </p>
+              <div className="mb-6">
+                <Image
+                  src="https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/690ec0097fad8b2d6aa19eec_Screenshot_2025-11-07_at_10.58.29_PM-removebg-preview.png"
+                  alt="TRIIBE TALK"
+                  width={600}
+                  height={150}
+                  className="w-full max-w-[400px] md:max-w-[600px] h-auto mx-auto md:mx-0 object-contain"
+                />
+              </div>
               <p className="text-xl md:text-2xl text-gray-600 font-medium mb-6">
                 Alternating, actionable lessons from current and next-gen
                 changemakers.
               </p>
-
-              {/* Podcast Platform Links */}
-              <div className="flex items-center gap-4 flex-wrap justify-center md:justify-start mt-6">
-                <span className="text-base text-gray-700 font-medium">
-                  Listen on:
-                </span>
-                <Link
-                  href="https://open.spotify.com/show/1P5jIjrqdDLL1Xoquj5eiE?si=fd24d12a0edf448c"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:opacity-70 transition-opacity"
-                  title="Spotify"
-                >
-                  <Image
-                    src="/images/spotify-logo.png"
-                    alt="Spotify"
-                    width={28}
-                    height={28}
-                    className="w-7 h-7"
-                  />
-                </Link>
-                <Link
-                  href="https://podcasts.apple.com/us/podcast/triibe-talk/id1855739237"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:opacity-70 transition-opacity"
-                  title="Apple Podcasts"
-                >
-                  <Image
-                    src="/images/apple-podcasts-logo.png"
-                    alt="Apple Podcasts"
-                    width={28}
-                    height={28}
-                    className="w-7 h-7"
-                  />
-                </Link>
-                <Link
-                  href="https://music.amazon.com/podcasts/da3070b6-5ec9-4ed0-9d8d-67a43f7fbb79/triibe-talk"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:opacity-70 transition-opacity"
-                  title="Amazon Music"
-                >
-                  <Image
-                    src="/images/amazon-music-logo.png"
-                    alt="Amazon Music"
-                    width={28}
-                    height={28}
-                    className="w-7 h-7"
-                  />
-                </Link>
-              </div>
             </div>
           </div>
         </div>
@@ -295,17 +246,28 @@ const MediaPage = () => {
             </div>
 
             {/* Luma Calendar */}
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <iframe
-                src="https://luma.com/embed/calendar/cal-7Eel9YxQnoBh2PA/events"
-                title="TRIIBE Events Calendar"
-                className="w-full h-full "
-                frameBorder="0"
-                style={{ border: "1px solid #bfcbda88", borderRadius: "16px" }}
-                allowFullScreen
-                aria-hidden="false"
-                tabIndex={0}
-              />
+            <div className="flex flex-col">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Upcoming Events
+              </h3>
+              <div
+                className="relative rounded-2xl overflow-hidden shadow-2xl"
+                style={{ flexGrow: 1 }}
+              >
+                <iframe
+                  src="https://luma.com/embed/calendar/cal-7Eel9YxQnoBh2PA/events"
+                  title="TRIIBE Events Calendar"
+                  className="w-full h-full min-h-[400px] md:min-h-0"
+                  frameBorder="0"
+                  style={{
+                    border: "1px solid #bfcbda88",
+                    borderRadius: "16px",
+                  }}
+                  allowFullScreen
+                  aria-hidden="false"
+                  tabIndex={0}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -342,6 +304,57 @@ const MediaPage = () => {
                 </span>
               </Link>
             ))}
+          </div>
+          {/* Podcast Platform Links */}
+          <div className="flex  items-center gap-4  justify-center  mt-8">
+            <span className="text-base text-gray-700 font-medium">
+              Listen on:
+            </span>
+            <Link
+              href="https://open.spotify.com/show/1P5jIjrqdDLL1Xoquj5eiE?si=fd24d12a0edf448c"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-70 transition-opacity"
+              title="Spotify"
+            >
+              <Image
+                src="/images/spotify-logo.png"
+                alt="Spotify"
+                width={28}
+                height={28}
+                className="w-7 h-7"
+              />
+            </Link>
+            <Link
+              href="https://podcasts.apple.com/us/podcast/triibe-talk/id1855739237"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-70 transition-opacity"
+              title="Apple Podcasts"
+            >
+              <Image
+                src="/images/apple-podcasts-logo.png"
+                alt="Apple Podcasts"
+                width={28}
+                height={28}
+                className="w-7 h-7"
+              />
+            </Link>
+            <Link
+              href="https://music.amazon.com/podcasts/da3070b6-5ec9-4ed0-9d8d-67a43f7fbb79/triibe-talk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-70 transition-opacity"
+              title="Amazon Music"
+            >
+              <Image
+                src="/images/amazon-music-logo.png"
+                alt="Amazon Music"
+                width={28}
+                height={28}
+                className="w-7 h-7"
+              />
+            </Link>
           </div>
         </div>
       </section>
@@ -398,7 +411,7 @@ const MediaPage = () => {
               </div>
               <div className="space-y-6">
                 <Link
-                  href="https://www.youtube.com/watch?v=BW9yj2ctQ8E"
+                  href="https://www.youtube.com/watch?v=pNKGIByJNnk"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow"
@@ -415,13 +428,12 @@ const MediaPage = () => {
                     <p className="text-xs text-gray-500 mb-2 uppercase">
                       Latest Workshop
                     </p>
-                    <h4 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                      Leadership Workshop
+                    <h4 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors text-[14px]">
+                      Signal to Noise Branding x The SuperBetter Mindset
                     </h4>
                     <p className="text-sm text-gray-600">
                       Watch our latest workshop session with industry leaders
-                      and experts as they share insights and practical
-                      strategies.
+                      and experts as they share insights.
                     </p>
                   </div>
                 </Link>

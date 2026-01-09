@@ -22,10 +22,10 @@ const ArchivePage = () => {
         {
           image: "/images/Workshop.png",
           category: "workshop",
-          title: "Signal to Noise Branding",
+          title: "Signal to Noise Branding x The SuperBetter Mindset",
           description:
             "In these virtual workshops, current and next-gen changemakers will present actionable strategies for entrepreneurs, intrapreneurs, and philentrepreneurs.",
-          link: "https://www.youtube.com/watch?v=BW9yj2ctQ8E",
+          link: "https://www.youtube.com/watch?v=pNKGIByJNnk",
         },
       ],
     },

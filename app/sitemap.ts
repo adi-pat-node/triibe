@@ -24,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/news`,
+      url: `${baseUrl}/media`,
       lastModified: currentDate,
       changeFrequency: "weekly",
       priority: 0.8,
