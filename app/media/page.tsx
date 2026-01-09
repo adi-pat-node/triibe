@@ -5,10 +5,41 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const MediaPage = () => {
   const [showNewsletter, setShowNewsletter] = useState(false);
+  const [videoSrc, setVideoSrc] = useState(
+    "https://www.youtube.com/embed/JHLqGjAnJ8c"
+  );
+
+  const videoRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVideoSrc(
+              "https://www.youtube.com/embed/JHLqGjAnJ8c?autoplay=1&mute=1&playsinline=1"
+            );
+          }
+        });
+      },
+      { threshold: 0.5 } // Video starts when 50% visible
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
+    };
+  }, []);
+
   const socialLinks = [
     {
       name: "LinkedIn",
@@ -39,7 +70,7 @@ const MediaPage = () => {
     },
     {
       name: "TikTok",
-      url: "#",
+      url: "https://www.tiktok.com/@triibetalk",
       svg: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
           <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
@@ -182,22 +213,98 @@ const MediaPage = () => {
                 Alternating, actionable lessons from current and next-gen
                 changemakers.
               </p>
+              <p className="text-xl md:text-2xl text-gray-600 font-medium mb-6">
+                Alternating, actionable lessons from current and next-gen
+                changemakers.
+              </p>
+
+              {/* Podcast Platform Links */}
+              <div className="flex items-center gap-4 flex-wrap justify-center md:justify-start mt-6">
+                <span className="text-base text-gray-700 font-medium">
+                  Listen on:
+                </span>
+                <Link
+                  href="https://open.spotify.com/show/1P5jIjrqdDLL1Xoquj5eiE?si=fd24d12a0edf448c"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:opacity-70 transition-opacity"
+                  title="Spotify"
+                >
+                  <Image
+                    src="/images/spotify-logo.png"
+                    alt="Spotify"
+                    width={28}
+                    height={28}
+                    className="w-7 h-7"
+                  />
+                </Link>
+                <Link
+                  href="https://podcasts.apple.com/us/podcast/triibe-talk/id1855739237"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:opacity-70 transition-opacity"
+                  title="Apple Podcasts"
+                >
+                  <Image
+                    src="/images/apple-podcasts-logo.png"
+                    alt="Apple Podcasts"
+                    width={28}
+                    height={28}
+                    className="w-7 h-7"
+                  />
+                </Link>
+                <Link
+                  href="https://music.amazon.com/podcasts/da3070b6-5ec9-4ed0-9d8d-67a43f7fbb79/triibe-talk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:opacity-70 transition-opacity"
+                  title="Amazon Music"
+                >
+                  <Image
+                    src="/images/amazon-music-logo.png"
+                    alt="Amazon Music"
+                    width={28}
+                    height={28}
+                    className="w-7 h-7"
+                  />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Video Section */}
+      {/* Video and Calendar Section */}
       <section className="py-16 bg-white">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-            <div className="aspect-video">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* YouTube Video */}
+            <div
+              ref={videoRef}
+              className="relative rounded-2xl overflow-hidden shadow-2xl"
+            >
+              <div className="aspect-video">
+                <iframe
+                  src={videoSrc}
+                  title="TRIIBE TALK Introduction"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
+            </div>
+
+            {/* Luma Calendar */}
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <iframe
-                src="https://www.youtube.com/watch/JHLqGjAnJ8c"
-                title="TRIIBE TALK Introduction"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                src="https://luma.com/embed/calendar/cal-7Eel9YxQnoBh2PA/events"
+                title="TRIIBE Events Calendar"
+                className="w-full h-full "
+                frameBorder="0"
+                style={{ border: "1px solid #bfcbda88", borderRadius: "16px" }}
                 allowFullScreen
-                className="w-full h-full"
+                aria-hidden="false"
+                tabIndex={0}
               />
             </div>
           </div>
@@ -242,39 +349,43 @@ const MediaPage = () => {
       {/* Three Column Content Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 ">
             {/* Podcasts Column */}
             <div>
-              <div className=" text-center mb-6">
+              <div className=" text-center mb-6 ">
                 <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
                   Podcasts
                 </h3>
               </div>
-              <div className="space-y-6">
-                {/* Placeholder podcast - replace with real data when available */}
-                <div className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+              <div className="space-y-16 ">
+                <Link
+                  href="https://www.youtube.com/watch?v=XNUr1NgLq28"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow"
+                >
                   <div className="relative aspect-video">
                     <Image
-                      src="https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/68bc223b49d654ec45b586f2_cdbb69db-45f2-4483-bebd-840f7916bf69.png"
-                      alt="TRIIBE Talk Podcast"
+                      src="/images/podcast.png"
+                      alt="TRIIBE Talk Podcast - Episode 1"
                       fill
-                      className="object-cover"
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                   <div className="p-4">
                     <p className="text-xs text-gray-500 mb-2 uppercase">
-                      Coming Soon
+                      Latest Episode
                     </p>
-                    <h4 className="font-bold text-gray-900 mb-2">
-                      TRIIBE Talk Podcast
+                    <h4 className="font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
+                      High Tech with HAITECH
                     </h4>
                     <p className="text-sm text-gray-600">
-                      Stay tuned for our upcoming podcast episodes featuring
-                      changemakers and leaders. Stay tuned for our upcoming
-                      podcast episode.
+                      Founder and Product Lead of HAITECH Learning explores her
+                      remarkable journey from growing up in Haiti to launching a
+                      nonprofit.
                     </p>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
 
@@ -286,30 +397,34 @@ const MediaPage = () => {
                 </h3>
               </div>
               <div className="space-y-6">
-                {/* Placeholder workshop - replace with real data when available */}
-                <div className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                <Link
+                  href="https://www.youtube.com/watch?v=BW9yj2ctQ8E"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow"
+                >
                   <div className="relative aspect-video">
                     <Image
-                      src="https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/68bc223b0a8f3484e009508b_0555d894-ad14-44cf-bc94-1403def66ee0.png"
-                      alt="Leadership Workshops"
+                      src="/images/workshop.png"
+                      alt="Leadership Workshop"
                       fill
-                      className="object-cover"
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                   <div className="p-4">
                     <p className="text-xs text-gray-500 mb-2 uppercase">
-                      Coming Soon
+                      Latest Workshop
                     </p>
-                    <h4 className="font-bold text-gray-900 mb-2">
-                      Leadership Workshops
+                    <h4 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                      Leadership Workshop
                     </h4>
                     <p className="text-sm text-gray-600">
-                      Check back soon for information on our upcoming workshops
-                      and events. Check back soon for information on our
-                      upcoming workshops and events.
+                      Watch our latest workshop session with industry leaders
+                      and experts as they share insights and practical
+                      strategies.
                     </p>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
 
