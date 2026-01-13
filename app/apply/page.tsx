@@ -191,7 +191,7 @@ const ApplyPage = () => {
           <p className="text-lg text-gray-700 mb-8 text-center">
             Applications are only open to Sophomores in college continuing the
             nonprofits they've already started. We're grateful for your interest
-            in joining TRIIBE
+            in joining TRIIBE.
           </p>
 
           <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg mb-8">
