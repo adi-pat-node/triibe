@@ -15,26 +15,26 @@ export default function Partners() {
       logo: "https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/68ffb357d8e6b8f92c45dbf5_2021-08-27_11-39-47_1630078796.webp",
     },
 
-    {
-      name: "Touch ",
-      logo: "/images/Touch.png",
-    },
-    {
-      name: "WEDO",
-      logo: "/images/Wedo.png",
-    },
-    {
-      name: "Streamr",
-      logo: "/images/Streamr.png",
-    },
-    {
-      name: "Rayze",
-      logo: "/images/Rayze.png",
-    },
-    {
-      name: "Allegiance Partners",
-      logo: "/images/AllegiancePartners.png",
-    },
+    // {
+    //   name: "Touch ",
+    //   logo: "/images/Touch.png",
+    // },
+    // {
+    //   name: "WEDO",
+    //   logo: "/images/Wedo.png",
+    // },
+    // {
+    //   name: "Streamr",
+    //   logo: "/images/Streamr.png",
+    // },
+    // {
+    //   name: "Rayze",
+    //   logo: "/images/Rayze.png",
+    // },
+    // {
+    //   name: "Allegiance Partners",
+    //   logo: "/images/AllegiancePartners.png",
+    // },
   ];
 
   return (
@@ -52,12 +52,9 @@ export default function Partners() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-center justify-items-center mt-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8 items-center justify-items-center mx-auto">
           {partners.map((partner, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-center w-full"
-            >
+            <div key={index} className="flex items-center">
               <Image
                 src={partner.logo || "/placeholder.svg"}
                 alt={partner.name}
