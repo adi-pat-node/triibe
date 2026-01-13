@@ -51,7 +51,7 @@ const ProgramsPage = () => {
     {
       title: "Mentorship",
       description:
-        "Two mentors each quarter meeting for one hour each month. We provide two dozen executive-level mentors throughout the course of the program, as well as financial counsel, legal templates, and grant writing support.",
+        "Two mentors each quarter meeting for one hour each month. We provide two dozen executive-level mentors throughout the course of the program, as well as financial counsel, legal templates, and grant writing support.   ",
       image:
         "https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/68ae1ac49cdf1ecf2ff188cc_1755817640722.jpeg",
     },
@@ -154,6 +154,30 @@ const ProgramsPage = () => {
                 <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line">
                   {card.description}
                 </p>
+                {/* Insert Jonny Imerman's quote only for Mentorship card */}
+                {card.title === "Mentorship" && (
+                  <div className="mt-8 max-w-5xl mx-auto text-center">
+                    <blockquote className="text-lg text-gray-700 leading-relaxed whitespace-pre-line">
+                      "TRIIBE's Mentorship Program is nothing short of
+                      astounding. With a busy schedule, I wasn't sure how much
+                      time I could give, but the ease of entry, flexible
+                      commitment, and thoughtful organization made it possible
+                      to truly support my young changemaker in a way that was
+                      both meaningful and deeply rewarding."{" "}
+                      <span className="underline">
+                        <a
+                          href="https://www.linkedin.com/in/imermanangels/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:underline"
+                        >
+                          - Jonny Imerman
+                        </a>
+                      </span>
+                    </blockquote>
+                    <cite className="text-base md:text-lg font-medium text-gray-900 not-italic"></cite>
+                  </div>
+                )}
               </div>
 
               {/* Image */}

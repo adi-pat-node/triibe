@@ -78,6 +78,41 @@ const MediaPage = () => {
       ),
     },
     {
+      name: "Spotify",
+      url: "https://open.spotify.com/show/1P5jIjrqdDLL1Xoquj5eiE?si=fd24d12a0edf448c",
+      svg: (
+        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z" />
+        </svg>
+      ),
+    },
+    {
+      name: "Apple",
+      url: "https://podcasts.apple.com/us/podcast/triibe-talk/id1855739237",
+      svg: (
+        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 0C5.372 0 0 5.372 0 12c0 6.627 5.372 12 12 12 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12zm0 2.824c5.065 0 9.176 4.111 9.176 9.176 0 5.064-4.111 9.176-9.176 9.176-5.065 0-9.177-4.112-9.177-9.176 0-5.065 4.112-9.176 9.177-9.176zm.025 3.28c-1.803 0-3.373 1.215-3.834 2.857-.046.167.068.337.249.337.149 0 .277-.099.311-.244.316-1.361 1.528-2.362 2.999-2.362s2.683 1.001 2.999 2.362c.034.145.162.244.311.244.181 0 .295-.17.249-.337-.461-1.642-2.031-2.857-3.834-2.857h-.45zm.025 3.416c-1.078 0-1.95.872-1.95 1.95v4.764c0 .527.473 1 1 1h1.9c.527 0 1-.473 1-1V11.47c0-1.078-.872-1.95-1.95-1.95z" />
+        </svg>
+      ),
+    },
+    {
+      name: "Amazon",
+      url: "https://music.amazon.com/podcasts/da3070b6-5ec9-4ed0-9d8d-67a43f7fbb79/triibe-talk",
+      svg: (
+        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+          <circle
+            cx="12"
+            cy="12"
+            r="11"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1"
+          />
+          <path d="M7 16.5c2.5 1.5 5.5 2 8.5 1.5.3-.05.5.15.4.4-.8 1.2-2.5 2.1-4.5 2.1-2.5 0-4.8-1.5-5.5-3.5-.1-.2.1-.4.3-.3.3.1.5.2.8.3zm11-1.5c-.2-.3-1.5-.1-2 0-.2 0-.2-.1 0-.2 1-.7 2.6-.5 2.8-.3.2.2 0 1.9-1 2.7-.1.1-.3.1-.2-.1.2-.5.7-1.7.4-2.1z" />
+        </svg>
+      ),
+    },
+    {
       name: "Subscribe",
       url: "#",
       svg: (
@@ -279,7 +314,7 @@ const MediaPage = () => {
           <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
             Connect With Us
           </h3>
-          <div className="flex justify-center items-center gap-6 flex-wrap">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-[450px] mx-auto">
             {socialLinks.map((social) => (
               <Link
                 key={social.name}
@@ -304,72 +339,6 @@ const MediaPage = () => {
                 </span>
               </Link>
             ))}
-          </div>
-
-          {/* Podcast Platform Links */}
-          <div className="flex items-center gap-6 flex-wrap justify-center mt-8">
-            <span className="text-base text-gray-700 font-medium">
-              Listen on:
-            </span>
-            <Link
-              href="https://open.spotify.com/show/1P5jIjrqdDLL1Xoquj5eiE?si=fd24d12a0edf448c"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex flex-col items-center gap-2 transition-transform hover:scale-110"
-            >
-              <div className="w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center group-hover:shadow-xl transition-shadow text-gray-800 group-hover:text-gray-600">
-                <svg
-                  className="w-8 h-8"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z" />
-                </svg>
-              </div>
-              <span className="text-sm font-medium text-gray-700">Spotify</span>
-            </Link>
-            <Link
-              href="https://podcasts.apple.com/us/podcast/triibe-talk/id1855739237"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex flex-col items-center gap-2 transition-transform hover:scale-110"
-            >
-              <div className="w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center group-hover:shadow-xl transition-shadow text-gray-800 group-hover:text-gray-600">
-                <svg
-                  className="w-8 h-8"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 0C5.372 0 0 5.372 0 12c0 6.627 5.372 12 12 12 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12zm0 2.824c5.065 0 9.176 4.111 9.176 9.176 0 5.064-4.111 9.176-9.176 9.176-5.065 0-9.177-4.112-9.177-9.176 0-5.065 4.112-9.176 9.177-9.176zm.025 3.28c-1.803 0-3.373 1.215-3.834 2.857-.046.167.068.337.249.337.149 0 .277-.099.311-.244.316-1.361 1.528-2.362 2.999-2.362s2.683 1.001 2.999 2.362c.034.145.162.244.311.244.181 0 .295-.17.249-.337-.461-1.642-2.031-2.857-3.834-2.857h-.45zm.025 3.416c-1.078 0-1.95.872-1.95 1.95v4.764c0 .527.473 1 1 1h1.9c.527 0 1-.473 1-1V11.47c0-1.078-.872-1.95-1.95-1.95z" />
-                </svg>
-              </div>
-              <span className="text-sm font-medium text-gray-700">Apple</span>
-            </Link>
-            <Link
-              href="https://music.amazon.com/podcasts/da3070b6-5ec9-4ed0-9d8d-67a43f7fbb79/triibe-talk"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex flex-col items-center gap-2 transition-transform hover:scale-110"
-            >
-              <div className="w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center group-hover:shadow-xl transition-shadow text-gray-800 group-hover:text-gray-600">
-                <svg
-                  className="w-8 h-8"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="11"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1"
-                  />
-                  <path d="M7 16.5c2.5 1.5 5.5 2 8.5 1.5.3-.05.5.15.4.4-.8 1.2-2.5 2.1-4.5 2.1-2.5 0-4.8-1.5-5.5-3.5-.1-.2.1-.4.3-.3.3.1.5.2.8.3zm11-1.5c-.2-.3-1.5-.1-2 0-.2 0-.2-.1 0-.2 1-.7 2.6-.5 2.8-.3.2.2 0 1.9-1 2.7-.1.1-.3.1-.2-.1.2-.5.7-1.7.4-2.1z" />
-                </svg>
-              </div>
-              <span className="text-sm font-medium text-gray-700">Amazon</span>
-            </Link>
           </div>
         </div>
       </section>
@@ -513,14 +482,12 @@ const MediaPage = () => {
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
               Stay informed. Join the TRIIBE
             </h3>
-            <Link
-              href="https://mailchi.mp/triibe.us/subscribe-to-triibe"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => setShowNewsletter(true)}
               className="bg-white text-black border-2 border-black px-8 py-3 rounded-full font-semibold text-base hover:bg-green-950 hover:text-white transition-all duration-300 whitespace-nowrap"
             >
               Subscribe
-            </Link>
+            </button>
           </div>
         </div>
       </section>

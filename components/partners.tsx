@@ -14,9 +14,26 @@ export default function Partners() {
       name: "Brooklyn Law School",
       logo: "https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/68ffb357d8e6b8f92c45dbf5_2021-08-27_11-39-47_1630078796.webp",
     },
+
     {
-      name: "Alethos Initiative",
-      logo: "https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/68ffb398b5891157fbc9a650_alethos%2BInitiative.webp",
+      name: "Touch ",
+      logo: "/images/Touch.png",
+    },
+    {
+      name: "WEDO",
+      logo: "/images/Wedo.png",
+    },
+    {
+      name: "Streamr",
+      logo: "/images/Streamr.png",
+    },
+    {
+      name: "Rayze",
+      logo: "/images/Rayze.png",
+    },
+    {
+      name: "Allegiance Partners",
+      logo: "/images/AllegiancePartners.png",
     },
   ];
 
@@ -50,28 +67,6 @@ export default function Partners() {
               />
             </div>
           ))}
-        </div>
-
-        {/* Testimonial Quote */}
-        <div className="mt-8 max-w-5xl mx-auto text-center">
-          <blockquote className="text-lg    text-gray-800 leading-relaxed mb-6">
-            "TRIIBE's Mentorship Program is nothing short of astounding. With a
-            busy schedule, I wasn't sure how much time I could give, but the
-            ease of entry, flexible commitment, and thoughtful organization made
-            it possible to truly support my young changemaker in a way that was
-            both meaningful and deeply rewarding."{" "}
-            <span className="underline">
-              <a
-                href="https://www.linkedin.com/in/imermanangels/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:underline"
-              >
-                - Jonny Imerman
-              </a>
-            </span>
-          </blockquote>
-          <cite className="text-base md:text-lg font-medium text-gray-900 not-italic"></cite>
         </div>
       </div>
     </section>

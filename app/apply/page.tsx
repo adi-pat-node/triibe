@@ -77,7 +77,7 @@ const ApplyPage = () => {
     {
       question: "What support do selected sophomores receive?",
       answer:
-        "Finalists receive a $5,000 grant, mentorship, podcast feature, and entry into our community. For a fuller look at additional opportunities, like the Summit, retreat, and documentaries, see the 1-pager above.",
+        "Finalists receive a $5,000 grant, mentorship, podcast feature, and entry into our community. For a fuller look at additional opportunities, like the Summit, retreat, and documentaries, see the deck above.",
     },
     {
       question: "How long is the program?",
@@ -131,33 +131,49 @@ const ApplyPage = () => {
 
             {/* Right side - Content (shown first on mobile, second on desktop) */}
             <div className="order-1 lg:order-2">
-              <h1 className="mt-12 md:mt-0 text-5xl md:text-8xl font-bold text-gray-900 mb-6 text-center">
-                We <br /> Deliver <br /> Holistic <br />
-                Support
+              <h1 className="mt-12 md:mt-0 text-4xl md:text-6xl font-bold text-gray-900 mb-6 text-center">
+                Helping <br />
+                Next-gen nonprofit founders <br />
+                continue their work
               </h1>
               <p className="text-lg text-gray-700 leading-relaxed">
-                We work exclusively with youth-led nonprofits, meeting you at
-                the pivotal moment in college when vision is high but support is
-                scarce. We provide consistent funding, mentorship, and community
-                for the rest of your college journey.
+                We are the pipeline, similar to finance or consulting, but for
+                social impact. TRIIBE provides three years of funding,
+                mentorship, and community to nonprofit founders, helping them
+                continue through college.
               </p>
+
+              <div className="flex flex-wrap  justify-center gap-8 mt-8">
+                <Link
+                  href="/programs"
+                  className="inline-flex bg-white border border-black text-black px-8 py-2 font-semibold text-lg hover:text-white rounded-[12px] hover:bg-green-950 hover:scale-105 transition-all duration-300"
+                >
+                  Programs
+                </Link>
+                <Link
+                  href="/media"
+                  className="inline-flex bg-white border border-black text-black px-8 py-2 rounded-[12px] font-semibold text-lg hover:text-white hover:bg-green-950 hover:scale-105 transition-all duration-300"
+                >
+                  Media
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Section 2: Full Overview Banner */}
-      <section className="py-8 px-6 bg-[#ededed]">
+      <section className="py-12 px-6 bg-[#ededed]">
         <div className="max-w-7xl mx-auto transition-all duration-300 hover:scale-105">
-          <div className="bg-white border border-gray-200 rounded-3xl px-8 md:px-12 py-8 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 ">
+          <div className="bg-white border border-gray-200 rounded-3xl px-8 md:px-12 py-8 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
             <p className="text-2xl md:text-3xl font-medium text-gray-900">
-              For a full overview, see our 1-pager
+              For a full overview, see our deck
             </p>
             <Link
-              href="https://cdn.prod.website-files.com/6898d941a0824c0e0bfab99b/692f473df726f9d2f9b421be_TRIIBE%20Executive%20Summary.pdf"
+              href="https://drive.google.com/file/d/1XxPb8UfeLXAVUy2zl0mle1lkUe7A2q1K/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
-              className="border-2 border-black text-black px-10 py-3 rounded-full font-semibold text-base hover:bg-green-950 hover:text-white transition-all duration-300 whitespace-nowrap"
+              className="border-2 border-black text-black px-10 py-3 rounded-full font-semibold text-base hover:bg-green-950 hover:text-white hover:scale-105 transition-all duration-300 whitespace-nowrap"
             >
               View
             </Link>
@@ -173,7 +189,9 @@ const ApplyPage = () => {
           </h2>
 
           <p className="text-lg text-gray-700 mb-8 text-center">
-            We're grateful for your interest in joining TRIIBE.
+            Applications are only open to Sophomores in college continuing the
+            nonprofits they've already started. We're grateful for your interest
+            in joining TRIIBE
           </p>
 
           <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg mb-8">

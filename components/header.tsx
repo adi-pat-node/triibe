@@ -3,9 +3,14 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname(); // get the current path
+
+  // helper to check if a link is active
+  const isActive = (path: string) => pathname === path;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-green-950">
@@ -27,49 +32,38 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
-            <a
-              href="/"
-              className="text-white hover:text-gray-300 transition-colors text-sm"
-            >
-              Home
-            </a>
-            <a
-              href="/programs"
-              className="text-white hover:text-gray-300 transition-colors text-sm"
-            >
-              Programs
-            </a>
-            <a
-              href="/media"
-              className="text-white hover:text-gray-300 transition-colors text-sm"
-            >
-              Media
-            </a>
-            <a
-              href="/about-us"
-              className="text-white hover:text-gray-300 transition-colors text-sm"
-            >
-              About Us
-            </a>
-            <a
-              href="/contact-us"
-              className="text-white hover:text-gray-300 transition-colors text-sm"
-            >
-              Contact Us
-            </a>
+            {[
+              { name: "Home", href: "/" },
+              { name: "Programs", href: "/programs" },
+              { name: "Media", href: "/media" },
+              { name: "About Us", href: "/about-us" },
+              { name: "Contact Us", href: "/contact-us" },
+            ].map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className={`text-white hover:text-gray-300 transition-colors text-sm ${
+                  isActive(link.href) && link.href !== "/"
+                    ? "font-bold underline underline-offset-4"
+                    : ""
+                }`}
+              >
+                {link.name}
+              </a>
+            ))}
           </div>
 
           {/* Desktop CTA Buttons */}
           <div className="hidden lg:flex items-center gap-4">
             <a
               href="/apply"
-              className="px-6 py-2.5 text-sm font-medium text-black bg-white border  hover:bg-green-950 hover:text-white  hover:border-white rounded   transform transition-transform hover:scale-105"
+              className="px-6 py-2.5 text-sm font-medium text-black bg-white border hover:bg-green-950 hover:text-white hover:border-white rounded transform transition-transform hover:scale-105"
             >
               Apply
             </a>
             <a
               href="/donate"
-              className="px-6 py-2.5 text-sm font-medium text-black bg-white border hover:bg-green-950 hover:text-white hover:border-white rounded   transform transition-transform hover:scale-105 "
+              className="px-6 py-2.5 text-sm font-medium text-black bg-white border hover:bg-green-950 hover:text-white hover:border-white rounded transform transition-transform hover:scale-105"
             >
               Donate
             </a>
@@ -95,46 +89,36 @@ export default function Header() {
         {mobileMenuOpen && (
           <div className="lg:hidden pb-4 border-t border-gray-800 mt-4">
             <div className="flex flex-col gap-4 pt-4">
-              <a
-                href="/"
-                className="text-white hover:text-gray-300 transition-colors text-sm"
-              >
-                Home
-              </a>
-              <a
-                href="/programs"
-                className="text-white hover:text-gray-300 transition-colors text-sm"
-              >
-                Programs
-              </a>
-              <a
-                href="/media"
-                className="text-white hover:text-gray-300 transition-colors text-sm"
-              >
-                Media
-              </a>
-              <a
-                href="/about-us"
-                className="text-white hover:text-gray-300 transition-colors text-sm"
-              >
-                About Us
-              </a>
-              <a
-                href="/contact-us"
-                className="text-white hover:text-gray-300 transition-colors text-sm"
-              >
-                Contact Us
-              </a>
+              {[
+                { name: "Home", href: "/" },
+                { name: "Programs", href: "/programs" },
+                { name: "Media", href: "/media" },
+                { name: "About Us", href: "/about-us" },
+                { name: "Contact Us", href: "/contact-us" },
+              ].map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className={`text-white hover:text-gray-300 transition-colors text-sm ${
+                    isActive(link.href) && link.href !== "/"
+                      ? "font-bold  underline underline-offset-4"
+                      : ""
+                  }`}
+                >
+                  {link.name}
+                </a>
+              ))}
+
               <div className="flex flex-col gap-3 pt-4">
                 <a
                   href="/apply"
-                  className="px-6 py-2.5 text-center text-sm font-medium text-black bg-white border  hover:bg-green-950 hover:text-white transition-colors hover:border-white rounded"
+                  className="px-6 py-2.5 text-center text-sm font-medium text-black bg-white border hover:bg-green-950 hover:text-white transition-colors hover:border-white rounded"
                 >
                   Apply
                 </a>
                 <a
                   href="/donate"
-                  className="px-6 py-2.5 text-center text-sm font-medium text-black bg-white border  hover:bg-green-950 hover:text-white transition-colors hover:border-white rounded"
+                  className="px-6 py-2.5 text-center text-sm font-medium text-black bg-white border hover:bg-green-950 hover:text-white transition-colors hover:border-white rounded"
                 >
                   Donate
                 </a>
