@@ -299,7 +299,7 @@ const AboutUsPage = () => {
     {
       name: "Pramaey Kapadia",
       role: "\u00A0",
-      image: "/images/team/Pramaey Kapadia.jpg",
+      image: "/images/team/PramaeyKapadia.jpg",
       linkedin: "", // No LinkedIn
       isInstagram: false,
     },
@@ -418,7 +418,7 @@ const AboutUsPage = () => {
     {
       name: "Duff Paris",
       role: "\u00A0",
-      image: "/images/team/Duff Paris.jpg",
+      image: "/images/team/DuffParis.jpg",
       linkedin: "https://www.linkedin.com/in/duff-paris-20b14b291/",
       isInstagram: false,
     },
