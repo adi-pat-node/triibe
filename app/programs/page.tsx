@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const ProgramsPage = () => {
   const [visibleSections, setVisibleSections] = useState<Set<number>>(
-    new Set()
+    new Set(),
   );
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -27,7 +27,7 @@ const ProgramsPage = () => {
         {
           threshold: 0.2,
           rootMargin: "0px 0px -100px 0px",
-        }
+        },
       );
 
       observer.observe(ref);
@@ -112,7 +112,7 @@ const ProgramsPage = () => {
           <div className="relative w-full h-100 ">
             <div className="relative w-full h-100 rounded-2xl overflow-hidden bg-white">
               <Image
-                src="/images/problem_infographic.png"
+                src="/images/problem_infographic1.png"
                 alt="The Problem - 80% of student-led nonprofits fade within a year"
                 fill
                 className="object-contain"
@@ -176,6 +176,17 @@ const ProgramsPage = () => {
                       </span>
                     </blockquote>
                     <cite className="text-base md:text-lg font-medium text-gray-900 not-italic"></cite>
+                  </div>
+                )}
+
+                {card.title === "Community" && (
+                  <div className="mt-8 max-w-5xl mx-auto ">
+                    <div className="text-lg text-gray-700 leading-relaxed whitespace-pre-line">
+                      We ask, how do pathways in college create opportunities
+                      for students in high school. By improving the perception
+                      of next-gen capabilities, we inspire more students to
+                      pursue social impact.
+                    </div>
                   </div>
                 )}
               </div>

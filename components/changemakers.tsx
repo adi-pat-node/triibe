@@ -132,10 +132,10 @@ export default function Changemakers() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-12">
           <p className="text-base md:text-lg text-gray-600 mb-4">
-            Our Changemakers
+            Our First Two Cohorts
           </p>
-          <h2 className="text-3xl font-bold text-black">
-            Sustaining 61 years of nonprofit service
+          <h2 className="text-2xl font-bold text-black">
+            Nonprofit Founders with 61 Combined years of leadership
           </h2>
         </div>
 
