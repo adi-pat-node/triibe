@@ -46,7 +46,7 @@ export default function Partners() {
           </h2>
           <p className="text-base md:text-lg text-gray-700 max-w-4xl mx-auto">
             Our strategic partners are industry leaders and innovators who have
-            contributed in-kind support or co-hosted programs with TRIIBE.
+            contribute in-kind support or co-hosted programs with TRIIBE.
             Together, we expand our impact and empower changemakers across
             communities.
           </p>
